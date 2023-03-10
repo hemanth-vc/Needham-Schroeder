@@ -11,6 +11,8 @@ two parties (Alice and KDC, Bob and KDC, and, Alice and Bob).
 
 When the initial two-message handshake is not used, and when NB is removed from the ticket, the extended version of Needham Schroeder reduces to the original version. For the original version of Needham Schroeder scheme first use the Electronic Code Book (ECB) for encrypting multiple blocks and demonstrate how Trudy is successful in impersonating Alice by causing a reflection attack. Remove this vulnerability by using Cipher Block Chaining (CBC) instead of ECB. In creating the reflection attack (the last three messages), assume that Trudy knows the ticket (i.e., you do not need to show how Trudy manages to get the ticket).
 
+Note: It is recommeded that you pass the byte array to encrypt and decrypted messages instead of passing strings. I realized it too late and was not able to make changes. The encryption and decryption is occurring in EncryptTDES and DecryptTDES functions respectively.
+
 The code files are present in "...\pkg\pa1" and the "...\pkg\pa1\TDESSecurity" contains the package that I imported in my files to reuse the code.
 
 Files in "...\pkg\pa1":
